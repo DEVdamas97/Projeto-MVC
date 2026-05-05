@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Boolean, DateTime
-from sqlalchemy.orm import func
+from sqlalchemy.sql import func
 from app.database import Base
 
 # Tabela usuario
