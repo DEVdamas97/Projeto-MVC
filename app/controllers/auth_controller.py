@@ -122,6 +122,13 @@ def fazer_login(
 
     return response
 
+# Rota de Saida
 
-   
+@router.get("/logout")
+def sair():
+    response = RedirectResponse(url="/auth/login", status_code=302)
+    response.delete_cookie("access_token")
+    return response
+
+
 
