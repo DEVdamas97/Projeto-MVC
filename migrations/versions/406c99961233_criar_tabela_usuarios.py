@@ -1,8 +1,8 @@
-"""criar tabela usuarios
+"""Criar tabela usuarios
 
-Revision ID: f4e830275cd1
+Revision ID: 406c99961233
 Revises: 
-Create Date: 2026-05-05 10:12:06.483834
+Create Date: 2026-05-05 10:02:12.112694
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = 'f4e830275cd1'
+revision: str = '406c99961233'
 down_revision: Union[str, Sequence[str], None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -28,7 +28,7 @@ def upgrade() -> None:
     sa.Column('senha_hash', sa.String(length=255), nullable=False),
     sa.Column('role', sa.String(length=20), nullable=False),
     sa.Column('ativo', sa.Boolean(), nullable=True),
-    sa.Column('criado_em', sa.DateTime(), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=True),
+    sa.Column('criando_em', sa.DateTime(), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_usuarios_email'), 'usuarios', ['email'], unique=True)
