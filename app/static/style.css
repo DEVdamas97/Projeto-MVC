@@ -1,0 +1,88 @@
+/* Reset básico para limpar as margens do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Centraliza o card na tela inteira */
+body {
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #1a1a1a;
+}
+
+/* Caixa principal (Card de Login) com a faixa vermelha do SENAI */
+.login-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border-top: 6px solid #ff1919; 
+}
+
+/* Título em destaque */
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+/* Subtítulo mais discreto */
+p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+/* Alinha os botões um embaixo do outro */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Estilo padrão de botão para os links */
+.button-group a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Botão Entrar - Vermelho SENAI */
+.btn-entrar {
+    background-color: #ff1919;
+    color: #ffffff;
+    border: 1px solid #ff1919;
+}
+
+.btn-entrar:hover {
+    background-color: #cc0000;
+    border-color: #cc0000;
+}
+
+/* Botão Criar Conta - Preto e Branco */
+.btn-cadastro {
+    background-color: transparent;
+    color: #1a1a1a;
+    border: 1.5px solid #1a1a1a;
+}
+
+.btn-cadastro:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}

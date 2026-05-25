@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem-vindo - AAPM</title>
-    <link rel="stylesheet" href="./">
+    <link rel="stylesheet" href="./static/css/styles.css">
 </head>
 <body>
-    <h1>Sistema de estoque</h1>
-    <p>Faça login para acessar o sistema.</p>
-    <br>
 
-    <a href="/auth/login">Entrar</a>
-    <a href="/auth/cadastro">Criar conta</a>
+    <div class="login-container">
+        <h1>Sistema de estoque</h1>
+        <p>Faça login para acessar o sistema.</p>
+        
+        <div class="button-group">
+            <a href="/auth/login" class="btn-entrar">Entrar</a>
+            <a href="/auth/cadastro" class="btn-cadastro">Criar conta</a>
+        </div>
+    </div>
+
 </body>
 </html>
