@@ -23,7 +23,7 @@ class Produto(Base):
         nullable=True
     )
     
-    categoria = relationship('Categoria', backref='produtos')
+    categoria = relationship("Categoria", back_populates="produtos")
     
 
     # método
