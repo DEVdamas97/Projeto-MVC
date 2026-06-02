@@ -8,6 +8,9 @@ from app.controllers import auth_controller
 from app.controllers import admin_controller
 from app.controllers import categoria_controller
 from app.controllers import produto_controller
+from app.controllers import movimentacao_controllers
+from app.controllers import cliente_controller
+from app.controllers import pdv_controller
 
 app = FastAPI(title="Sistema estoque")
 
@@ -20,7 +23,11 @@ templates = Jinja2Templates(directory="app/templates")
 app.include_router(auth_controller.router)
 app.include_router(admin_controller.router)
 app.include_router(categoria_controller.router)
+app.include_router(movimentacao_controllers.router)
 app.include_router(produto_controller.router)
+app.include_router(cliente_controller.router)
+app.include_router(pdv_controller.router)
+
 
 #Tela inicial
 @app.get("/")
